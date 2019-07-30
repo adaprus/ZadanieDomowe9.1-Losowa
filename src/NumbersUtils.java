@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 public class NumbersUtils {
@@ -7,14 +8,19 @@ public class NumbersUtils {
 
         for (int i = 0; i < array.length; i++) {
             array[i] = generator.nextInt(100);
+            System.out.printf("%d ", array[i]);
         }
         return array;
     }
 
     public void showAndReverse(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.printf("%d ", array[i]);
-            System.out.printf("%d ", array[array.length - i - 1]);
+        System.out.println();
+        for (int i = 0; i < 2 * array.length; i++) {
+            if (i < array.length) {
+                System.out.printf("%d ", array[i]);
+            } else {
+                System.out.printf("%d ", array[2 * array.length - i - 1]);
+            }
         }
     }
 }
